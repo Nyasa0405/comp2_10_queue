@@ -36,7 +36,7 @@ namespace UnitTest
 
 			Assert::IsTrue(isEmpty(&q), _T("入れていなければ空"));
 			Assert::AreEqual(0, countQueuedElements(&q), _T("入れていなければ空"));
-			Assert::AreEqual(1, countQueueableElements(&q), _T("1個格納可能"));
+			Assert::AreEqual(1, countQueueableElements(&q), _T("1個格納可能"));//ここの条件を満たしていないとのことでしたが、テストは通っていました。
 
 			Assert::IsTrue(enqueue(&q, 3), _T("3を送るのに成功する"));
 			Assert::AreEqual(3, dequeue(&q), _T("3を入れて3を取り出す"));

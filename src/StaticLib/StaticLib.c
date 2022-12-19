@@ -41,9 +41,7 @@ bool enqueue(QUEUE* q, int val)
 	*q->tail = val;
 	q->tail++;
 	return true;
-	// ToDo: valのデータをキューに追加します
-	// 上手くいかない場合にはfalseを返します
-	// メモリを使い切ったら先頭アドレスに戻って追加して下さい
+	
 }
 
 
@@ -57,9 +55,7 @@ bool enqueue_array(QUEUE* q, int* addr, int num)
 	{
 		if (!enqueue(q, addr[i]))return false;
 	}
-	// ToDo: addrからnum個のデータをキューに追加します
-	// 上手くいかない場合にはfalseを返します
-	// メモリを使い切ったら先頭アドレスに戻って追加して下さい
+
 
 	return true;
 }
